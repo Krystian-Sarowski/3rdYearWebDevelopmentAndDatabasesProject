@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<p>
+        {{ system_response }}
+</p>
+
+<p>
+    Your total number of tries {{ num_of_tries }}
+</p>
+
+<form method="POST" action="/record">
+
+<p>
+    Enter your name: <input type="text" name="name">
+</p>
+
+<p>
+<input type="SUBMIT" value="Submit">
+</p>
+
+</form>
+
+{% endblock %}

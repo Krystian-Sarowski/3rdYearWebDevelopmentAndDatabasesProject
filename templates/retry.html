@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<p>
+    {{ system_response }}
+</p>
+
+<form method="POST" action="/game">
+
+<p>
+    Guess a number: <input type="number" name="guessedNum">
+</p>
+
+<p>
+<input type="SUBMIT" value="Try To Guess">
+</p>
+
+</form>
+
+{% endblock %}

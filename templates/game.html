@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+{% if the_num == "" %}
+    <p>
+        The timer has started try your best!
+    </p>
+{% else %}
+    <p>
+        The number you gussed was: {{ the_num }}.
+    </p>
+{% endif %}
+
+<p>
+    {{ system_response }}
+</p>
+
+<p>
+    The number is between 1 and 1000.
+</p>
+
+<form method="POST" action="/game">
+
+<p>
+    Guess a number: <input type="number" name="guessedNum">
+</p>
+
+<p>
+<input type="SUBMIT" value="Try To Guess">
+</p>
+
+</form>
+
+{% endblock %}
